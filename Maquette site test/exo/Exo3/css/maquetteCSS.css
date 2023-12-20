@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
+body {
+  margin: 0;
+  font-size: 1rem;
+  font-family: "montserrat";
+}
+
+.txt-center {
+  text-align: center;
+}
+
+/* Bandeau de navigation principal*/
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Logo */
+.LogoSite {
+  display: flex;
+  align-items: center;
+  width: 10%;
+}
+
+.LogoSite img {
+  margin-right: 10px;
+}
+
+h1 {
+  color: #158b78;
+}
+
+/* Navigation */
+.main_nav {
+  display: flex;
+  align-items: center;
+}
+
+/* Ajout de styles pour le menu burger */
+.menu-burger {
+  display: none; /* Caché par défaut sur les écrans plus grands */
+  cursor: pointer;
+}
+
+.menu-icon {
+  font-size: 24px;
+  color: #158b78;
+}
+
+.main_nav-element {
+  list-style-type: none;
+  display: flex;
+}
+
+.main_nav-links {
+  margin-right: 20px;
+}
+
+.main_nav-link {
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+}
+
+/* Ajout de styles pour le menu déroulant sur les petits écrans */
+.menu-dropdown {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.menu-dropdown.show {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-dropdown a {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+/* Image bannière */
+.banniere-image {
+  background-image: url(https://s1.1zoom.me/b7068/853/Basketball_Ball_565959_1920x1080.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.banniere-contenu {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.banniere-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff8c94;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Contenu de la page - Block */
+.intro-main {
+  padding: 50px 5% 0;
+}
+
+.main_case--block {
+  max-width: 1200px;
+  gap: 30px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  border-radius: 10px;
+}
+
+.main_block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.main_block h4 {
+  text-align: center;
+}
+
+.main_block p {
+  font-weight: 400;
+  align-self: flex-start;
+}
+
+.main_block button {
+  background-color: #ff8c94;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Ajout de styles pour l'élément aside */
+aside {
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+/* Ajout de styles pour le pied de page */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+/* Media queries pour les écrans de taille tablette */
+@media screen and (max-width: 768px) {
+  .main_nav {
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+  }
+
+  .main_nav-element {
+    margin-top: 10px;
+  }
+
+  .menu-burger {
+    display: block;
+  }
+
+  .main_nav-links {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+  }
+
+  .main_nav-links.show {
+    display: flex;
+  }
+
+  .menu-dropdown {
+    width: 100%;
+  }
+
+  .menu-icon {
+    display: none; /* Cacher l'icône de menu sur les écrans plus petits */
+  }
+}
+
+/* Media queries pour les écrans de taille téléphone */
+@media screen and (max-width: 480px) {
+  .LogoSite {
+    padding-left: 10px;
+    width: 20%;
+  }
+
+  h1 {
+    margin-right: 10px;
+  }
+
+  .main_nav-element {
+    margin-top: 10px;
+  }
+
+  .intro-main {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .main_case--block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main_block {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
